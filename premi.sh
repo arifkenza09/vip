@@ -17,10 +17,7 @@ GRAY="\e[1;30m"
 NC='\e[0m'
 red='\e[1;31m'
 green='\e[0;32m'
-TIMES="10"
-CHATID="-1001973626140"
-KEY="5627879486:AAE0uDsbjwLGUVa9BjCDLU01Cd2F8xFpd8o"
-URL="https://api.telegram.org/bot$KEY/sendMessage"
+
 # ===================
 clear
   # // Exporint IP AddressInformation
@@ -33,9 +30,9 @@ clear;clear;clear
 
   # // Banner
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
-echo -e "  Welcome To Dragon Tunneling ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
+echo -e "  Welcome To Yass vpn Tunneling ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
 echo -e " This Will Quick Setup VPN Server On Your Server"
-echo -e "  Auther : ${green}Dragon Emperor® ${NC}${YELLOW}(${NC} ${green} Dragon Tunneling ${NC}${YELLOW})${NC}"
+echo -e "  Auther : ${green}Yass vpn® ${NC}${YELLOW}(${NC} ${green} Yass vpn Tunneling ${NC}${YELLOW})${NC}"
 echo -e " © Recode By My Self Dragon Tunneling${YELLOW}(${NC} 2023 ${YELLOW})${NC}"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo ""
@@ -285,9 +282,9 @@ clear
 echo -e "   |\e[1;32mPlease Select a Domain Type Below \e[0m|"
 echo -e "   '----------------------------------'"
 echo -e "     \e[1;32m1)\e[0m Domain Sendiri"
-echo -e "     \e[1;32m2)\e[0m Gunakan Domain Random Khusus Digital ocean ISP LAIN ✖️ "
+#echo -e "     \e[1;32m2)\e[0m Gunakan Domain Random Khusus Digital ocean ISP LAIN ✖️ "
 echo -e "   ------------------------------------"
-read -p "   Please select numbers 1-2 or Any Button(Random) : " host
+read -p "   Please select numbers 1 or Any Button(Random) : " host
 echo ""
 if [[ $host == "1" ]]; then
 echo -e "   \e[1;32mPlease Enter Your Subdomain $NC"
@@ -309,25 +306,7 @@ clear
 
 clear
 #GANTI PASSWORD DEFAULT
-restart_system() {
-    USRSC=$(wget -qO- https://raw.githubusercontent.com/arifkenza09/vip/main/izin | grep $ipsaya | awk '{print $2}')
-    EXPSC=$(wget -qO- https://raw.githubusercontent.com/arifkenza09/vip/main/izin | grep $ipsaya | awk '{print $3}')
-    TIMEZONE=$(printf '%(%H:%M:%S)T')
-    TEXT="
-<code>────────────────────</code>
-<b>⚡AUTOSCRIPT PREMIUM⚡</b>
-<code>────────────────────</code>
-<code>ID     : </code><code>$USRSC</code>
-<code>Domain : </code><code>$domain</code>
-<code>Date   : </code><code>$TIME</code>
-<code>Time   : </code><code>$TIMEZONE</code>
-<code>Ip vps : </code><code>$ipsaya</code>
-<code>Exp Sc : </code><code>$EXPSC</code>
-<code>────────────────────</code>
-<i>Automatic Notification from Github</i>
-"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ🐳","url":"https://t.me/Renzy_Store"},{"text":"ɪɴꜱᴛᴀʟʟ🐬","url":"https://t.me/channel_fightertunnell/25"}]]}'
-    curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
-}
+
 clear
 # Pasang SSL
 function pasang_ssl() {
@@ -918,8 +897,8 @@ cat >/etc/rc.local <<EOF
 #!/bin/sh -e
 # rc.local
 # By default this script does nothing.
-iptables -I INPUT -p udp --dport 5300 -j ACCEPT
-iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300
+#iptables -I INPUT -p udp --dport 5300 -j ACCEPT
+#iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300
 systemctl restart netfilter-persistent
 exit 0
 EOF
