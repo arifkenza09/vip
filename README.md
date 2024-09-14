@@ -57,6 +57,6 @@ apt install -y && apt update -y && apt upgrade -y && apt install lolcat -y && ge
 ```
 ``
 ```
-### INSTALL UDP
+#INSTALL UDP
 
 wget -q https://github.com/Friendz99/project/raw/main/ssh/udp-custom.sh ; bash udp-custom.sh
